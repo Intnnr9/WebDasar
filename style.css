@@ -15,25 +15,24 @@ body {
 
 /* Navigation */
 nav {
+    position: sticky;
+    top: 0;
+    z-index: 999; /* Pastikan angka ini besar agar tidak tertutup elemen hero */
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
-    background: #fff;
+    background: #ffffff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
+    position: sticky; /* Membuat navbar tetap di atas saat scroll */
     top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2d3436;
-}
-
-.logo span {
-    color: #6c5ce7;
+    z-index: 1000; /* Memastikan navbar tidak tertutup konten lain */
 }
 
 nav ul {
@@ -53,6 +52,16 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    color: #6c5ce7; /* Warna ungu saat kursor diarahkan */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.logo span {
     color: #6c5ce7;
 }
 
@@ -295,4 +304,54 @@ footer {
 /* Memperhalus transisi navbar */
 nav {
     transition: all 0.9s ease;
+}
+
+/* Styling Halaman Detail */
+.main-content {
+    min-height: 70vh;
+    padding: 40px 10%;
+}
+
+.detail-page {
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.detail-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.big-icon {
+    font-size: 80px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.detail-content ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.detail-content ul li {
+    background: #f4f7f6;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #6c5ce7;
+}
+
+.btn-sm {
+    color: #6c5ce7;
+    font-weight: 600;
+    margin-top: 15px;
+    display: block;
 }
