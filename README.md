@@ -1,2 +1,2 @@
 *Intan Nuraeni*
-![Screenshot Dashboard](img/web.jpeg)
+![Screenshot Dashboard](web.jpeg)S
